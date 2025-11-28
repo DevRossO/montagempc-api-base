@@ -1,0 +1,128 @@
+{
+  "usuarios": [
+    {
+      "id": 12,
+      "nome": "Felipe",
+      "email": "felipe@email.com",
+      "senha": "$2b$10$T/A.beMTBUN07jvAwL7E8uUxRs19TcjDKrXVxivxH.tuPlgTwXvVu",
+      "saldo": 100,
+      "ultimoLogin": "2025-11-28T00:29:14.612Z",
+      "tentativasLogin": 0,
+      "bloqueado": false,
+      "bloqueadoEm": null
+    },
+    {
+      "id": 13,
+      "nome": "Teste Usuario",
+      "email": "teste@usuario.com",
+      "senha": "$2b$10$jg69mWuNdTkMx0G4CXbcvueCRD3lzh.JmMZ.PfE66laabl5pzcgqW",
+      "saldo": 100,
+      "ultimoLogin": "2025-11-28T01:44:44.317Z",
+      "tentativasLogin": 0,
+      "bloqueado": false,
+      "bloqueadoEm": null
+    },
+    {
+      "id": 15,
+      "nome": "Teste Usuario",
+      "email": "teste.usuario@usuario.com",
+      "senha": "$2b$10$xnDHkQtnS.rPzz0GhqKhMeQj5U024T3vS.YvEruWEcX7CJKfCrdJO",
+      "saldo": 100,
+      "ultimoLogin": "2025-11-28T01:54:48.223Z",
+      "tentativasLogin": 0,
+      "bloqueado": false,
+      "bloqueadoEm": null
+    },
+    {
+      "id": 16,
+      "nome": "Teste Usuario",
+      "email": "felipe.usuario@usuario.com",
+      "senha": "$2b$10$R/Rb23QnBG.fGD2zQ3jhUuD5SDkReK7jdmTMhmkWTI2YTUFGM8ZQm",
+      "saldo": 100,
+      "ultimoLogin": "2025-11-28T02:16:31.377Z",
+      "tentativasLogin": 0,
+      "bloqueado": false,
+      "bloqueadoEm": null
+    }
+  ],
+  "logs": [
+    {
+      "id": 1,
+      "acao": "Cadastro de usuário",
+      "timestamp": "2025-11-28T01:44:02.143Z",
+      "usuarioId": 13
+    },
+    {
+      "id": 2,
+      "acao": "Login bem-sucedido",
+      "timestamp": "2025-11-28T01:44:44.345Z",
+      "usuarioId": 13
+    },
+    {
+      "id": 3,
+      "acao": "Tentativa de login inválida",
+      "timestamp": "2025-11-28T01:45:07.764Z",
+      "usuarioId": 13
+    },
+    {
+      "id": 4,
+      "acao": "Tentativa de login inválida",
+      "timestamp": "2025-11-28T01:49:40.662Z",
+      "usuarioId": 13
+    },
+    {
+      "id": 5,
+      "acao": "Tentativa de login inválida",
+      "timestamp": "2025-11-28T01:51:46.788Z",
+      "usuarioId": 13
+    },
+    {
+      "id": 6,
+      "acao": "Cadastro de usuário",
+      "timestamp": "2025-11-28T01:54:08.529Z",
+      "usuarioId": 15
+    },
+    {
+      "id": 7,
+      "acao": "Login bem-sucedido",
+      "timestamp": "2025-11-28T01:54:48.255Z",
+      "usuarioId": 15
+    },
+    {
+      "id": 8,
+      "acao": "Senha alterada com sucesso",
+      "timestamp": "2025-11-28T02:03:43.804Z",
+      "usuarioId": 15
+    },
+    {
+      "id": 9,
+      "acao": "Senha alterada com sucesso",
+      "timestamp": "2025-11-28T02:06:59.373Z",
+      "usuarioId": 15
+    },
+    {
+      "id": 10,
+      "acao": "Cadastro de usuário",
+      "timestamp": "2025-11-28T02:16:08.698Z",
+      "usuarioId": 16
+    },
+    {
+      "id": 11,
+      "acao": "Login bem-sucedido",
+      "timestamp": "2025-11-28T02:16:31.403Z",
+      "usuarioId": 16
+    },
+    {
+      "id": 12,
+      "acao": "Tentativa de alteração de senha inválida",
+      "timestamp": "2025-11-28T02:18:32.881Z",
+      "usuarioId": 16
+    },
+    {
+      "id": 13,
+      "acao": "Senha alterada com sucesso",
+      "timestamp": "2025-11-28T02:19:08.121Z",
+      "usuarioId": 16
+    }
+  ]
+}

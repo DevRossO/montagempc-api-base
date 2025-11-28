@@ -2,9 +2,12 @@ import { PrismaClient } from '@prisma/client';
 import { Prisma } from '@prisma/client';
 import { Router } from 'express';
 import { z } from 'zod';
+import { authMiddleware } from "../middlewares/authMiddleware";
 
 const prisma = new PrismaClient();
 const router = Router();
+
+router.use(authMiddleware);
 
 const pedidoSchema = z.object({
   usuarioId: z.number().int().positive(),

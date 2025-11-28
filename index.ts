@@ -1,9 +1,9 @@
 import express from "express"
-import usuariosRouter from "./routes/usuarios"
-import lojasRouter from "./routes/lojas";
-import pecasRouter from "./routes/pecas";
-import itensPedidoRouter from "./routes/itensPedido";
-import pedidosRouter from "./routes/pedidos";
+import usuariosRouter from "./src/routes/usuarios"
+import lojasRouter from "./src/routes/lojas";
+import pecasRouter from "./src/routes/pecas";
+import itensPedidoRouter from "./src/routes/itensPedido";
+import pedidosRouter from "./src/routes/pedidos";
 import 'dotenv/config'
 
 

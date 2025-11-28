@@ -8,57 +8,63 @@ datasource db {
 }
 
 model Usuario {
-  id       Int      @id @default(autoincrement())
-  nome     String
-  email    String   @unique
-  saldo    Float    @default(0)
-  pedidos  Pedido[]
-  logs     Log[]
+  id          Int       @id @default(autoincrement())
+  nome        String
+  email       String    @unique
+  senha       String
+  saldo       Float     @default(0)
+  ultimoLogin DateTime?
+
+  tentativasLogin Int       @default(0)
+  bloqueado       Boolean   @default(false)
+  bloqueadoEm     DateTime?
+
+  pedidos Pedido[]
+  logs    Log[] 
 }
 
 model Loja {
-  id        Int     @id @default(autoincrement())
-  nome      String
-  endereco  String
-  telefone  String
-  pecas     Peca[]
+  id       Int    @id @default(autoincrement())
+  nome     String
+  endereco String
+  telefone String
+  pecas    Peca[]
 }
 
 model Peca {
-  id        Int      @id @default(autoincrement())
-  nome      String
-  tipo      String
-  quantidade Int
-  preco     Float
-  lojaId    Int
-  loja      Loja     @relation(fields: [lojaId], references: [id])
-  itens     ItemPedido[]
-}
-
-model Pedido {
   id         Int          @id @default(autoincrement())
-  data       DateTime     @default(now())
-  total      Float
-  usuarioId  Int
-  usuario    Usuario      @relation(fields: [usuarioId], references: [id])
+  nome       String
+  tipo       String
+  quantidade Int
+  preco      Float
+  lojaId     Int
+  loja       Loja         @relation(fields: [lojaId], references: [id])
   itens      ItemPedido[]
 }
 
+model Pedido {
+  id        Int          @id @default(autoincrement())
+  data      DateTime     @default(now())
+  total     Float
+  usuarioId Int
+  usuario   Usuario      @relation(fields: [usuarioId], references: [id])
+  itens     ItemPedido[]
+}
+
 model ItemPedido {
-  id        Int      @id @default(autoincrement())
-  pedidoId  Int
-  pecaId    Int
+  id         Int    @id @default(autoincrement())
+  pedidoId   Int
+  pecaId     Int
   quantidade Int
-  subtotal  Float
-  pedido    Pedido   @relation(fields: [pedidoId], references: [id])
-  peca      Peca     @relation(fields: [pecaId], references: [id])
+  subtotal   Float
+  pedido     Pedido @relation(fields: [pedidoId], references: [id])
+  peca       Peca   @relation(fields: [pecaId], references: [id])
 }
 
 model Log {
-  id        Int     @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   acao      String
   timestamp DateTime @default(now())
   usuarioId Int
   usuario   Usuario  @relation(fields: [usuarioId], references: [id])
 }
-
