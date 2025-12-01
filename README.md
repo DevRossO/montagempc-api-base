@@ -26,9 +26,7 @@ O projeto tem foco em segurança, integridade dos dados e boas práticas de back
 
 * Validação de senha forte:
 
-Mínimo 8 caracteres
-
-Letra maiúscula, minúscula, número e símbolo
+- Mínimo 8 caracteres Letra maiúscula, minúscula, número e símbolo
 
 🚫 Controle de Tentativas de Login
 
@@ -54,37 +52,31 @@ Letra maiúscula, minúscula, número e símbolo
 
 🧾 Sistema de Logs
 
-* Registro automático de ações importantes:
+* Registro automático de ações importantes como:
 
-Cadastro
+- Cadastro
 
-Login bem-sucedido
+- Login bem-sucedido
 
-Tentativas inválidas
+- Tentativas inválidas
 
-Alteração de senha
+- Alteração de senha
 
-Exclusão de usuários
+- Exclusão de usuários
 
-Consulta de logs via rota protegida
+- Consulta de logs via rota protegida
 
-Logs associados ao usuário responsável pela ação
+- Logs associados ao usuário responsável pela ação
 
 💾 Backup e Restore (Segurança Extra)
 
-Backup:
+- Backup: Exporta usuários e logs para um arquivo .json
 
-Exporta usuários e logs para um arquivo .json
+- Restore: Restaura completamente o banco de dados a partir do arquivo de backup
 
-Armazena o backup no servidor
+- Remove dados atuais antes da restauração
 
-Restore:
-
-Restaura completamente o banco de dados a partir do arquivo de backup
-
-Remove dados atuais antes da restauração
-
-Recria usuários e logs mantendo integridade histórica
+- Recria usuários e logs mantendo integridade histórica
 
 🛠️ Tecnologias Utilizadas
 
@@ -110,18 +102,18 @@ Recria usuários e logs mantendo integridade histórica
 
 📂 Modelagem do Banco de Dados
 
-O banco de dados é modelado com Prisma, representando:
+* O banco de dados é modelado com Prisma, representando:
 
-Usuários
+- Usuários
 
-Logs de ações
+- Logs de ações
 
-Campos específicos para segurança:
+- Campos específicos para segurança:
 
-tentativasLogin
+- tentativasLogin
 
-bloqueado
+- bloqueado
 
-ultimoLogin
+- ultimoLogin
 
-As relações garantem integridade referencial e permitem auditoria completa das ações realizadas no sistema.
+* As relações garantem integridade referencial e permitem auditoria completa das ações realizadas no sistema.
